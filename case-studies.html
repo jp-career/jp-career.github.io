@@ -1,131 +1,308 @@
-<!doctype html>
-<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Studies — JP de Paula</title>
+  <meta name="description" content="Healthcare enterprise customer success case studies: implementation, adoption, reliability, and operational outcomes." />
   <title>Case Studies | JP de Paula</title>
-  <meta name="description" content="Selected case studies across enterprise customer IT, clinical workflows, and global technical operations." />
-  <style>
+  <meta name="description" content="Selected case studies highlighting enterprise customer IT, clinical workflows, and technical operations outcomes." />
+<style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 0; line-height: 1.55; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px; }
+    h1 { margin: 0 0 8px 0; font-size: 34px; }
+    .sub { color: #444; margin: 0 0 22px 0; }
+    .nav { margin: 10px 0 26px; }
+    .nav a { margin-right: 14px; }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 18px 0 26px; }
+    .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 16px; }
+    .small { color:#555; font-size: 14px; margin: 8px 0 0; }
+    .tag { display:inline-block; border:1px solid #e6e6e6; border-radius:999px; padding:6px 10px; margin: 6px 6px 0 0; font-size:13px; }
+    hr { border: 0; border-top: 1px solid #eee; margin: 28px 0; }
+    a { color: inherit; }
+    ul { margin-top: 8px; }
     :root{
-      --bg:#0b1220; --panel:#0f1b33; --text:#e9eefc; --muted:#b9c3dd; --line:rgba(255,255,255,.12);
+      --bg:#0b1220;
+      --card:#0f1b33;
+      --text:#e9eefc;
+      --muted:#b9c3dd;
+      --line:rgba(255,255,255,.10);
+      --accent:#5eead4;
+      --accent2:#60a5fa;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    a{color:var(--text);text-decoration:none} a:hover{text-decoration:underline}
-    .wrap{max-width:980px;margin:0 auto;padding:24px 16px 56px}
-    .topbar{border:1px solid var(--line);border-radius:16px;background:rgba(15,27,51,.72);padding:18px}
-    .topbar h1{margin:0 0 6px;font-size:26px}
-    .topbar p{margin:0;color:var(--muted)}
-    .nav{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px}
-    .nav a{border:1px solid var(--line);border-radius:12px;padding:8px 10px;color:var(--muted);background:rgba(255,255,255,.03)}
-    .nav a[aria-current="page"]{color:var(--text);border-color:rgba(94,234,212,.28)}
-    .pills{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
-    .pill{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.03)}
-    .toc{margin-top:14px;border:1px solid var(--line);border-radius:16px;background:rgba(15,27,51,.35);padding:14px}
-    .toc h2{margin:0 0 8px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
-    .toc a{display:inline-block;margin:6px 10px 0 0;color:var(--text)}
-    .card{margin-top:14px;border:1px solid var(--line);border-radius:16px;background:rgba(15,27,51,.55);padding:16px}
-    .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px;color:var(--muted);font-size:13px}
-    .tag{font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid rgba(94,234,212,.28);background:rgba(94,234,212,.06);color:var(--text)}
-    h2{margin:0 0 10px;font-size:18px}
-    h3{margin:14px 0 6px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
-    ul{margin:8px 0 0 18px;padding:0} li{margin:6px 0}
-    .kpis{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
-    .chip{font-size:12px;padding:6px 10px;border-radius:999px;border:1px dashed rgba(255,255,255,.22);color:var(--muted)}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 15% 10%, rgba(96,165,250,.18), transparent 60%),
+                  radial-gradient(900px 700px at 85% 30%, rgba(94,234,212,.14), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+    header{
+      display:flex;gap:14px;align-items:flex-start;justify-content:space-between;
+      padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(15,27,51,.65);
+      backdrop-filter: blur(8px);
+    }
+    .title h1{margin:0 0 6px;font-size:26px;letter-spacing:.2px}
+    .title p{margin:0;color:var(--muted)}
+    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .pill{
+      font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);
+      color:var(--muted);background:rgba(255,255,255,.03)
+    }
+    .nav{
+      display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;
+      font-size:13px;color:var(--muted)
+    }
+    .nav a{
+      text-decoration:none;border:1px solid var(--line);padding:8px 10px;border-radius:12px;
+      background:rgba(255,255,255,.03)
+    }
+    .nav a:hover{border-color:rgba(255,255,255,.22)}
+    main{margin-top:18px;display:grid;gap:14px}
+    .card{
+      border:1px solid var(--line);border-radius:18px;background:rgba(15,27,51,.55);
+      padding:18px 18px 16px;
+    }
+    .card h2{margin:0 0 8px;font-size:18px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px;margin:0 0 12px}
+    .meta span{display:inline-flex;gap:6px;align-items:center}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;font-size:12px;
+      padding:6px 10px;border-radius:12px;border:1px solid rgba(94,234,212,.25);
+      color:var(--text);background:rgba(94,234,212,.06)
+    }
+    .badge.blue{border-color:rgba(96,165,250,.25);background:rgba(96,165,250,.07)}
+    .grid{
+      display:grid;gap:12px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .col6{grid-column:span 6}
+    .col12{grid-column:span 12}
+    @media (max-width:780px){
+      header{flex-direction:column}
+      .nav{justify-content:flex-start}
+      .col6{grid-column:span 12}
+    }
+    h3{margin:0 0 6px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:6px 0}
+    .kpi{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:10px
+    }
+    .kpi .chip{
+      font-size:12px;border:1px dashed rgba(255,255,255,.22);
+      border-radius:999px;padding:6px 10px;color:var(--muted)
+    }
+    footer{
+      margin-top:18px;color:var(--muted);font-size:13px;text-align:center
+    }
     .small{font-size:12px;color:var(--muted)}
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
-  </style>
+    code{background:rgba(255,255,255,.05);padding:2px 6px;border-radius:8px;border:1px solid var(--line)}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <h1>Case Studies</h1>
-      <p>Selected work across enterprise customer IT, clinical workflows, and global technical operations.</p>
+<div class="wrap">
+    <h1>Case Studies</h1>
+    <p class="sub">
+      Selected examples of enterprise customer success outcomes in regulated healthcare environments.
+      Client details are anonymized for confidentiality.
+    </p>
 
-      <div class="pills" aria-label="Focus areas">
-        <span class="pill">Healthcare • Enterprise</span>
-        <span class="pill">Clinical Workflows</span>
-        <span class="pill">Customer IT &amp; Networking</span>
-        <span class="pill">Go-Live Readiness</span>
-        <span class="pill">Tier-3/4 Escalations</span>
+    <div class="nav">
+      <a href="/">← Home</a>
+      <a href="/resume.pdf">Resume (PDF)</a>
+      <a href="mailto:jeanbrz@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/jp-de-paula-b305a33b0/">LinkedIn</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <strong>LATAM Delivery Playbook (2012–2023)</strong>
+        <p class="small">Standardized delivery; better install efficiency, fewer parts replacements, improved forecasting.</p>
+        <a href="#cs1">Jump to case</a>
+      </div>
+      <div class="card">
+        <strong>Radixact La Paz Reliability Turnaround</strong>
+        <p class="small">High-altitude adaptation; durable reliability outcome with rare downtime.</p>
+        <a href="#cs2">Jump to case</a>
+      </div>
+      <div class="card">
+        <strong>Uptime Model: Parts + Logistics Enablement</strong>
+        <p class="small">Spare kits + Mexico depot workflow + optimized freight forwarding to reduce downtime risk.</p>
+        <a href="#cs3">Jump to case</a>
+      </div>
+      <div class="card">
+        <strong>Unity Clinical Ops Handover System (2026)</strong>
+        <p class="small">Teams-based handover dataset; 10+ sites since Jan 2026; fewer meetings/calls and faster readiness.</p>
+        <a href="#cs4">Jump to case</a>
+      </div>
+      <div class="card">
+        <strong>Unity Connectivity Playbook (Pilot, 2026)</strong>
+        <p class="small">Smartsheet template created from scratch; pilot rollout with Systems Specialists + PMs.</p>
+        <a href="#cs5">Jump to case</a>
+      </div>
+    </div>
+
+    <hr />
+
+    <h2 id="cs1">1) LATAM Delivery Playbook (2012–2023)</h2>
+    <div class="card">
+      <p><strong>Company:</strong> Accuray (LATAM)</p>
+      <p><strong>Products:</strong> CyberKnife • Radixact • TomoTherapy • TomoReNew</p>
+      <p><strong>Scope:</strong> Participated in all installs across a multi-country LATAM footprint (2012–2023).</p>
+
+      <div>
+        <span class="tag">Implementation Leadership</span>
+        <span class="tag">Regulated Healthcare</span>
+        <span class="tag">Partner/Distributor Management</span>
+        <span class="tag">Go-Live Readiness</span>
+        <span class="tag">Forecast Predictability</span>
       </div>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="case-studies.html" aria-current="page">Case Studies</a>
-        <a href="resume.pdf">Resume (PDF)</a>
-      </nav>
-    </header>
+      <p style="margin-top:12px;"><strong>Context</strong></p>
+      <p>
+        Delivery required consistent execution across distributors, regulatory requirements, construction readiness variability,
+        and cross-border logistics. Success meant predictable milestones from pre-sales through clinical go-live and a smooth
+        transition into warranty/service operations.
+      </p>
 
-    <!-- This TOC ensures your existing links work: #cs1 ... #cs5 -->
-    <section class="toc" aria-label="Case study links">
-      <h2>Jump to</h2>
-      <a href="#cs1">CS1</a>
-      <a href="#cs2">CS2</a>
-      <a href="#cs3">CS3</a>
-      <a href="#cs4">CS4</a>
-      <a href="#cs5">CS5</a>
-    </section>
+      <p><strong>My role</strong></p>
+      <p>
+        Owned end-to-end execution from pre-sales → installation → go-live, and ensured readiness for warranty and ongoing service.
+        Led alignment across Accuray internal teams, distributor organizations, and customer stakeholders (executive, technical, clinical).
+      </p>
 
-    <!-- CS1–CS3 + CS5 are placeholders so your anchors aren't "broken".
-         Replace the titles/content later with your real case studies. -->
-    <section class="card" id="cs1">
-      <div class="meta"><span class="tag">CS1</span><span class="small">Placeholder</span></div>
-      <h2>Case Study 1 — Coming soon</h2>
-      <p class="small">Replace this section with your CS1 content. (Anchor: <strong>#cs1</strong>)</p>
-    </section>
+      <p><strong>What I did</strong></p>
+      <ul>
+        <li>Standardized execution and handoffs across the project lifecycle to improve quality and reduce rework.</li>
+        <li>Used Salesforce for major milestones and Smartsheet for detailed execution from Pre-Install to Go-Live.</li>
+        <li>Controlled readiness and quality via governed PDF checklists archived at close-out.</li>
+        <li>Coordinated across Accuray (Installation, Physics, Engineering, Sales, Ops, QA), distributors (FSE, QA, Service, Commercial, Leadership),
+            and customer executives/technical/clinical teams.</li>
+      </ul>
 
-    <section class="card" id="cs2">
-      <div class="meta"><span class="tag">CS2</span><span class="small">Placeholder</span></div>
-      <h2>Case Study 2 — Coming soon</h2>
-      <p class="small">Replace this section with your CS2 content. (Anchor: <strong>#cs2</strong>)</p>
-    </section>
+      <p><strong>Results</strong></p>
+      <ul>
+        <li>More efficient installs and reduced parts replacement through improved overall project quality.</li>
+        <li>Forecast variance improved from 12–24 months down to ≤6 months (remaining variance mainly due to construction permits).</li>
+      </ul>
+    </div>
 
-    <section class="card" id="cs3">
-      <div class="meta"><span class="tag">CS3</span><span class="small">Placeholder</span></div>
-      <h2>Case Study 3 — Coming soon</h2>
-      <p class="small">Replace this section with your CS3 content. (Anchor: <strong>#cs3</strong>)</p>
-    </section>
+    <hr />
 
-    <!-- CS4 (YOUR UPDATED CONTENT) -->
-    <section class="card" id="cs4">
-      <div class="meta">
-        <span class="tag">2026</span>
-        <span>CS4 • Process + System Design</span>
-        <span>•</span>
-        <span>Global • Clinical Ops • Customer IT</span>
+    <h2 id="cs2">2) Radixact La Paz Reliability Turnaround</h2>
+    <div class="card">
+      <p><strong>Company:</strong> Accuray</p>
+      <p><strong>Location:</strong> La Paz, Bolivia (high altitude)</p>
+      <p><strong>Product:</strong> Radixact</p>
+
+      <div>
+        <span class="tag">Escalation Leadership</span>
+        <span class="tag">Reliability Outcomes</span>
+        <span class="tag">Cross-Functional Alignment</span>
+        <span class="tag">Customer Trust</span>
       </div>
 
-      <h2>Unity Connectivity Handover System — Enabling Clinical Ops Training &amp; Go-Lives</h2>
-
-      <h3>Context</h3>
+      <p style="margin-top:12px;"><strong>Context</strong></p>
       <p>
-        Clinical Operations required site-specific hospital IT and network details to complete project milestones,
-        plan onsite training, and execute safe go-lives. Data lived across multiple owners and channels, creating
-        repeated follow-ups and delays.
+        A high-altitude deployment introduced non-standard technical requirements, creating risk to long-term reliability,
+        uptime, and customer confidence.
       </p>
 
-      <h3>My role</h3>
+      <p><strong>My role</strong></p>
       <p>
-        Designed and implemented the global handover approach as an individual contributor, aligning Clinical Ops needs
-        with Systems Specialists inputs and escalation workflows.
+        Led cross-functional coordination through a complex technical adaptation, balancing timeline impact with the
+        long-term success criteria: stability, uptime, and confident clinical operations.
       </p>
 
-      <h3>Problem</h3>
+      <p><strong>What I did</strong></p>
       <ul>
-        <li>Site connectivity data was fragmented across people, threads, and documents.</li>
-        <li>Clinical Ops had to contact Systems Specialists repeatedly for the same site inputs.</li>
-        <li>Milestone completion and training readiness were blocked by missing/unclear data.</li>
+        <li>Aligned Installation, Physics, Engineering, QA, and Operations on the altitude-driven requirements gap and plan of record.</li>
+        <li>Drove development and deployment of a high-altitude hardware kit for the site.</li>
+        <li>Managed distributor execution and customer communications through go-live preparation.</li>
       </ul>
 
-      <h3>Solution</h3>
+      <p><strong>Results</strong></p>
       <ul>
-        <li>Built a Teams-based dataset to centralize the full Clinical Ops connectivity data set per site.</li>
-        <li>Standardized fields and a handover checklist so inputs were complete and consistent.</li>
-        <li>Defined ownership and timing so data was available ahead of milestones, training, and go-live.</li>
+        <li>System became one of the most reliable in LATAM with rare downtime, largely manageable via preventive maintenance.</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2 id="cs3">3) Uptime Model: Parts + Logistics Enablement</h2>
+    <div class="card">
+      <p><strong>Company:</strong> Accuray (LATAM)</p>
+      <p><strong>Focus:</strong> Reducing downtime risk by improving parts availability and logistics responsiveness</p>
+
+      <div>
+        <span class="tag">Operational Excellence</span>
+        <span class="tag">Time-to-Resolution</span>
+        <span class="tag">Regional Enablement</span>
+        <span class="tag">Customer Outcomes</span>
+    <header>
+      <div class="title">
+        <h1>Case Studies</h1>
+        <p>Selected work across enterprise customer IT, clinical workflows, and global technical operations.</p>
+        <div class="pillrow">
+          <span class="pill">Healthcare • Enterprise</span>
+          <span class="pill">Clinical Workflows</span>
+          <span class="pill">Customer IT & Networking</span>
+          <span class="pill">Go-Live Readiness</span>
+          <span class="pill">Tier-3/4 Escalations</span>
+        </div>
+</div>
+
+      <p style="margin-top:12px;"><strong>Context</strong></p>
+      <p>
+        In LATAM, uptime is often constrained by parts lead times and cross-border shipping. Improving customer outcomes
+        required strengthening the operating model behind service responsiveness.
+      </p>
+
+      <p><strong>What I did</strong></p>
+      <ul>
+        <li>Deployed spare parts kits staged in each distributor country to reduce “waiting on parts” downtime exposure.</li>
+        <li>Enabled a regional logistics depot model in Mexico to streamline fulfillment.</li>
+        <li>Coordinated specialized US-based freight forwarding optimized for LATAM shipments.</li>
       </ul>
 
-      <h3>What I standardized (examples)</h3>
+      <p><strong>Results</strong></p>
+      <ul>
+        <li>Improved uptime by reducing delays tied to parts availability and shipping bottlenecks.</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2 id="cs4">4) Unity Clinical Ops Handover System (2026)</h2>
+    <div class="card">
+      <p><strong>Role:</strong> MR Linac Systems Specialist (Oct 2023–Present)</p>
+      <p><strong>Scope:</strong> Global Unity Systems team + Unity Clinical Operations</p>
+      <p><strong>Rollout:</strong> 10+ sites onboarded since Jan 2026 (no retroactive backfill yet)</p>
+
+      <div>
+        <span class="tag">Operational Excellence</span>
+        <span class="tag">Knowledge System</span>
+        <span class="tag">Global Enablement</span>
+        <span class="tag">Escalation Readiness</span>
+      </div>
+
+      <p style="margin-top:12px;"><strong>Problem</strong></p>
+      <p>
+        Connectivity and deployment-critical information was fragmented across email threads, ad-hoc messaging, meetings, and multiple internal systems.
+        Some key details existed only with the Systems Specialist, creating delays and repeated internal coordination.
+      </p>
+
+      <p><strong>What I did</strong></p>
+      <p>
+        Created a standardized handover process from the Unity Systems team to Unity Clinical Operations and implemented a centralized
+        connectivity dataset accessible via companywide Microsoft Teams (including mobile access).
+      </p>
+
+      <p><strong>What I standardized (examples)</strong></p>
       <ul>
         <li>Project reference, site identity, hospital IT contact, Systems Specialist owner</li>
         <li>Linac identifiers and naming conventions (e.g., MOSAIQ linac name)</li>
@@ -134,31 +311,162 @@
         <li>Clinical admin URL, SIP/checklist links</li>
       </ul>
 
-      <h3>Impact</h3>
+      <p><strong>Results</strong></p>
       <ul>
-        <li>Reduced repeat outreach to Systems Specialists and eliminated “hunt for info” across channels.</li>
-        <li>Improved predictability for project milestones, onsite clinical training planning, and go-live readiness.</li>
-        <li>Adopted across <strong>10+ sites since Jan 2026</strong> (and expanding as additional sites enter trial).</li>
+        <li>Adopted globally with 10+ sites added since Jan 2026.</li>
+        <li>Reduced friction with fewer meetings/calls and less “single person holds the data” dependency.</li>
+        <li>Saved time: typically a couple of hours previously spent searching across systems, plus additional hours of back-and-forth with specialists.</li>
       </ul>
+    </div>
 
-      <div class="kpis" aria-label="Highlights">
-        <span class="chip">10+ sites since Jan 2026</span>
-        <span class="chip">Single source of truth</span>
-        <span class="chip">Milestones → Training → Go-Live</span>
-        <span class="chip">Less rework &amp; follow-ups</span>
+    <hr />
+
+    <h2 id="cs5">5) Unity Connectivity Playbook (Pilot, 2026)</h2>
+    <div class="card">
+      <p><strong>Role:</strong> MR Linac Systems Specialist (Oct 2023–Present)</p>
+      <p><strong>Tool:</strong> Smartsheet template </p>
+      <p><strong>Stage:</strong> Deployed ~1 month ago; pilot rollout with Systems Specialists + PMs</p>
+
+      <div>
+        <span class="tag">Process Standardization</span>
+        <span class="tag">Delivery Predictability</span>
+        <span class="tag">Risk Management</span>
+        <span class="tag">PM Enablement</span>
       </div>
 
-      <p class="small">Note: Details are summarized to protect customer confidentiality.</p>
-    </section>
+      <p style="margin-top:12px;"><strong>Context</strong></p>
+      <p>
+        Unity connectivity spans interdependent steps and prerequisites across hospital IT readiness and software requirements.
+        Execution quality depends on making ownership, dependencies, and readiness criteria visible early.
+      </p>
 
-    <section class="card" id="cs5">
-      <div class="meta"><span class="tag">CS5</span><span class="small">Placeholder</span></div>
-      <h2>Case Study 5 — Coming soon</h2>
-      <p class="small">Replace this section with your CS5 content. (Anchor: <strong>#cs5</strong>)</p>
-    </section>
+      <p><strong>Problem</strong></p>
+      <p>
+        Connectivity projects can drift when tracking is inconsistent across sites, dependencies aren’t explicit, and prerequisites are discovered late—creating rework and coordination overhead.
+      </p>
 
-    <footer>© <span id="y"></span> JP de Paula</footer>
-  </div>
+      <p><strong>What I did</strong></p>
+      <p>
+        Designed and built a standardized Smartsheet Unity Connectivity template as a single execution plan and “source of truth” for Systems Specialists and PMs, including phase-based workflow, ownership, status, % complete, target vs actual dates, dependency tracking, and risk-of-delay flagging.
+      </p>
+
+      <p><strong>Pilot approach</strong></p>
+      <p>
+        Starting with Systems Specialists and PMs first to validate repeatability, adoption, and operational fit before expanding visibility to broader groups.
+      </p>
+
+      <p><strong>Expected outcomes (pilot success criteria)</strong></p>
+      <ul>
+        <li>Fewer missed prerequisites and less last-minute rework</li>
+        <li>More predictable connectivity milestone execution</li>
+        <li>Lower coordination overhead due to a shared, live plan</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h3 style="margin-top:28px;">Contact</h3>
+    <div class="card">
+      <p><strong>Email:</strong> <a href="mailto:jeanbrz@gmail.com">jeanbrz@gmail.com</a></p>
+      <p><strong>Location:</strong> Orlando, Florida, United States (Open to Remote / US time zones)</p>
+      <p><strong>Languages:</strong> English • Spanish • Portuguese</p>
+    </div>
+
+    <p class="small" style="margin-top: 18px;">© jpdepaula.com • Client details anonymized for confidentiality.</p>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="case-studies.html" aria-current="page">Case Studies</a>
+        <a href="resume.pdf">Resume (PDF)</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- CASE STUDY 4 -->
+      <section class="card" id="unity-handover-2026">
+        <div class="meta">
+          <span class="badge">2026</span>
+          <span class="badge blue">Process + System Design</span>
+          <span>Global • Clinical Ops • Customer IT</span>
+        </div>
+
+        <h2>Unity Connectivity Handover System — Enabling Clinical Ops Training &amp; Go-Lives</h2>
+
+        <div class="grid">
+          <div class="col6">
+            <h3>Context</h3>
+            <p>
+              Clinical Operations required site-specific hospital IT and network details to complete
+              project milestones, plan onsite training, and execute safe go-lives. Data lived across
+              multiple owners and channels, creating repeated follow-ups and delays.
+            </p>
+          </div>
+
+          <div class="col6">
+            <h3>My Role</h3>
+            <p>
+              Designed and implemented the global handover approach as an individual contributor,
+              aligning Clinical Ops needs with Systems Specialists inputs and escalation workflows.
+            </p>
+          </div>
+
+          <div class="col6">
+            <h3>Problem</h3>
+            <ul>
+              <li>Site connectivity data was fragmented across people, threads, and documents.</li>
+              <li>Clinical Ops had to contact Systems Specialists repeatedly for the same site inputs.</li>
+              <li>Milestone completion and training readiness were blocked by missing/unclear data.</li>
+            </ul>
+          </div>
+
+          <div class="col6">
+            <h3>Solution</h3>
+            <ul>
+              <li>Built a Teams-based dataset to centralize the full Clinical Ops connectivity data set per site.</li>
+              <li>Standardized fields and a handover checklist so inputs were complete and consistent.</li>
+              <li>Defined ownership and timing so data was available ahead of milestones, training, and go-live.</li>
+            </ul>
+          </div>
+
+          <div class="col12">
+            <h3>Impact</h3>
+            <ul>
+              <li>Reduced repeat outreach to Systems Specialists and eliminated “hunt for info” across channels.</li>
+              <li>Improved predictability for project milestones, onsite clinical training planning, and go-live readiness.</li>
+              <li>Adopted across <strong>10+ sites since Jan 2026</strong> (and expanding as additional sites enter trial).</li>
+            </ul>
+            <div class="kpi">
+              <span class="chip">10+ sites since Jan 2026</span>
+              <span class="chip">Single source of truth</span>
+              <span class="chip">Milestones → Training → Go-Live</span>
+              <span class="chip">Less rework &amp; follow-ups</span>
+            </div>
+            <p class="small">
+              Note: Details are summarized to protect customer confidentiality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Placeholder for other case studies (keep or replace with your existing content) -->
+      <section class="card" id="more">
+        <h2>More case studies</h2>
+        <p class="small">
+          If you already have additional case studies on your current site, paste them here or send me your
+          existing <code>case-studies.html</code> and I’ll merge everything without changing your layout.
+        </p>
+        <ul>
+          <li>Add your other case studies above/below this block.</li>
+          <li>Keep each case study as a <code>&lt;section class=&quot;card&quot;&gt;</code> for consistent styling.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="y"></span> JP de Paula</div>
+    </footer>
+</div>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
