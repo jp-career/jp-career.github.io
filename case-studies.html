@@ -55,7 +55,17 @@
     }
     hr{ border:0; border-top:1px solid #eee; margin: 28px 0; }
     ul{ margin-top:8px; }
-  </style>
+  
+    /* CS4 layout helpers (light theme) */
+    .meta{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:10px; color: var(--muted); font-size:13px; }
+    .badge{ display:inline-block; font-size:12px; padding:5px 10px; border-radius:999px; border:1px solid var(--line); background: var(--chip); color: var(--text); }
+    .badge.blue{ border-color:#cfe3ff; background:#eef6ff; }
+    .grid2{ display:grid; gap:14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid2 .col{ border:1px solid #f0f0f0; border-radius:12px; padding:12px; background:#fff; }
+    .grid2 .col.full{ grid-column: 1 / -1; }
+    @media (max-width: 780px){ .grid2{ grid-template-columns: 1fr; } }
+
+</style>
 </head>
 
 <body>
@@ -221,51 +231,76 @@
 
     <hr />
 
-    <h2 id="cs4">4) Unity Clinical Ops Handover System (2026)</h2>
-    <div class="card">
-      <p><strong>Role:</strong> MR Linac Systems Specialist (Oct 2023–Present)</p>
-      <p><strong>Scope:</strong> Global Unity Systems team + Unity Clinical Operations</p>
-      <p><strong>Rollout:</strong> 10+ sites onboarded since Jan 2026 (no retroactive backfill yet)</p>
-
-      <div>
-        <span class="tag">Operational Excellence</span>
-        <span class="tag">Knowledge System</span>
-        <span class="tag">Global Enablement</span>
-        <span class="tag">Escalation Readiness</span>
+    <section class="card" id="cs4" data-case="unity-handover-2026">
+      <div class="meta">
+        <span class="badge">2026</span>
+        <span class="badge blue">Process + System Design</span>
+        <span>Global • Clinical Ops • Customer IT</span>
       </div>
 
-      <p style="margin-top:12px;"><strong>Problem</strong></p>
-      <p>
-        Connectivity and deployment-critical information was fragmented across email threads, ad-hoc messaging, meetings, and multiple internal systems.
-        Some key details existed only with the Systems Specialist, creating delays and repeated internal coordination.
-      </p>
+      <h2>4) Unity Connectivity Handover System (2026) — Enabling Clinical Ops Training &amp; Go-Lives</h2>
 
-      <p><strong>What I did</strong></p>
-      <p>
-        Created a standardized handover process from the Unity Systems team to Unity Clinical Operations and implemented a centralized
-        connectivity dataset accessible via companywide Microsoft Teams (including mobile access).
-      </p>
+      <div class="grid2">
+        <div class="col">
+          <h3>Context</h3>
+          <p>
+            Clinical Operations required site-specific system configuration, hospital IT and network details to complete
+            project milestones, plan onsite training, and execute successful go-lives. Data lived across
+            multiple owners and channels, creating repeated follow-ups and delays.
+          </p>
+        </div>
 
-      <p><strong>What I standardized (examples)</strong></p>
-      <ul>
-        <li>Project reference, site identity, hospital IT contact, Systems Specialist owner</li>
-        <li>Linac identifiers and naming conventions (e.g., MOSAIQ linac name)</li>
-        <li>MOSAIQ/Monaco versions, environment notes, non-standard configuration flags</li>
-        <li>Vendor account availability + access details, domain account requirements guidance</li>
-        <li>Clinical admin URL, SIP/checklist links</li>
-      </ul>
+        <div class="col">
+          <h3>My Role</h3>
+          <p>
+            Designed and implemented the global handover approach as an individual contributor,
+            aligning Clinical Ops needs with Systems Specialists inputs and escalation workflows.
+          </p>
+        </div>
 
-      <p><strong>Results</strong></p>
-      <ul>
-        <li>Adopted globally with 10+ sites added since Jan 2026.</li>
-        <li>Reduced friction with fewer meetings/calls and less “single person holds the data” dependency.</li>
-        <li>Saved time: typically a couple of hours previously spent searching across systems, plus additional hours of back-and-forth with specialists.</li>
-      </ul>
-    </div>
+        <div class="col">
+          <h3>Problem</h3>
+          <ul>
+            <li>Site connectivity data was fragmented across people, threads, and documents.</li>
+            <li>Clinical Ops had to contact Systems Specialists repeatedly for the same site inputs.</li>
+            <li>Milestone completion and training readiness were blocked by missing/unclear data.</li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>Solution</h3>
+          <ul>
+            <li>Built a Teams-based global dataset to centralize the full Clinical Ops connectivity data set per site.</li>
+            <li>Standardized fields and a handover checklist so inputs were complete and consistent.</li>
+            <li>Defined ownership and timing so data was available ahead of milestones, training, and go-live.</li>
+          </ul>
+
+          <div style="margin-top:12px">
+            <h3>What I standardized (examples)</h3>
+            <ul>
+              <li>Project reference, site identity, hospital IT contact, Systems Specialist owner</li>
+              <li>Linac identifiers and naming conventions (e.g., MOSAIQ linac name)</li>
+              <li>MOSAIQ/Monaco versions, environment notes, non-standard configuration flags</li>
+              <li>Vendor account availability + access details, domain account requirements guidance</li>
+              <li>Clinical admin URL, SIP/checklist links</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col full">
+          <h3>Impact</h3>
+          <ul>
+            <li>Reduced repeat outreach to Systems Specialists and eliminated “hunt for info” across channels.</li>
+            <li>Improved predictability for project milestones, onsite clinical training planning, and go-live readiness.</li>
+            <li>Adopted across <strong>10+ sites since Jan 2026</strong> (and expanding as additional sites enter trial).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
 
     <hr />
-
-    <h2 id="cs5">5) Unity Connectivity Playbook (Pilot, 2026)</h2>
+<h2 id="cs5">5) Unity Connectivity Playbook (Pilot, 2026)</h2>
     <div class="card">
       <p><strong>Role:</strong> MR Linac Systems Specialist (Oct 2023–Present)</p>
       <p><strong>Tool:</strong> Smartsheet template</p>
