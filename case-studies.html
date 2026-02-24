@@ -7,110 +7,37 @@
   <meta name="description" content="Selected case studies across enterprise customer IT, clinical workflows, and global technical operations." />
   <style>
     :root{
-      --bg:#0b1220;
-      --panel:#0f1b33;
-      --text:#e9eefc;
-      --muted:#b9c3dd;
-      --line:rgba(255,255,255,.12);
-      --accent:#5eead4;
+      --bg:#0b1220; --panel:#0f1b33; --text:#e9eefc; --muted:#b9c3dd; --line:rgba(255,255,255,.12);
     }
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a{ color: var(--text); text-decoration: none; }
-    a:hover{ text-decoration: underline; }
-    .wrap{ max-width: 980px; margin: 0 auto; padding: 24px 16px 56px; }
-
-    .topbar{
-      border:1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(15,27,51,.72);
-      padding: 18px;
-    }
-    .topbar h1{ margin:0 0 6px; font-size: 26px; }
-    .topbar p{ margin:0; color: var(--muted); }
-
-    .nav{
-      margin-top: 12px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .nav a{
-      border:1px solid var(--line);
-      border-radius: 12px;
-      padding: 8px 10px;
-      color: var(--muted);
-      background: rgba(255,255,255,.03);
-    }
-    .nav a[aria-current="page"]{ color: var(--text); border-color: rgba(94,234,212,.28); }
-
-    .pills{ margin-top: 12px; display:flex; flex-wrap:wrap; gap:8px; }
-    .pill{
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      background: rgba(255,255,255,.03);
-    }
-
-    .card{
-      margin-top: 14px;
-      border:1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(15,27,51,.55);
-      padding: 16px;
-    }
-    .meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-      margin-bottom: 10px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .tag{
-      font-size: 12px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(94,234,212,.28);
-      background: rgba(94,234,212,.06);
-      color: var(--text);
-    }
-    h2{ margin: 0 0 10px; font-size: 18px; }
-    h3{
-      margin: 14px 0 6px;
-      font-size: 12px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .12em;
-    }
-    ul{ margin: 8px 0 0 18px; padding:0; }
-    li{ margin: 6px 0; }
-    .kpis{ margin-top: 10px; display:flex; flex-wrap:wrap; gap:8px; }
-    .chip{
-      font-size: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px dashed rgba(255,255,255,.22);
-      color: var(--muted);
-    }
-    .small{ font-size: 12px; color: var(--muted); }
-    footer{ margin-top: 18px; text-align:center; color: var(--muted); font-size: 13px; }
-    code{ background: rgba(255,255,255,.06); border:1px solid var(--line); padding:2px 6px; border-radius: 8px; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--text);text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:980px;margin:0 auto;padding:24px 16px 56px}
+    .topbar{border:1px solid var(--line);border-radius:16px;background:rgba(15,27,51,.72);padding:18px}
+    .topbar h1{margin:0 0 6px;font-size:26px}
+    .topbar p{margin:0;color:var(--muted)}
+    .nav{margin-top:12px;display:flex;flex-wrap:wrap;gap:10px}
+    .nav a{border:1px solid var(--line);border-radius:12px;padding:8px 10px;color:var(--muted);background:rgba(255,255,255,.03)}
+    .nav a[aria-current="page"]{color:var(--text);border-color:rgba(94,234,212,.28)}
+    .pills{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+    .pill{font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.03)}
+    .toc{margin-top:14px;border:1px solid var(--line);border-radius:16px;background:rgba(15,27,51,.35);padding:14px}
+    .toc h2{margin:0 0 8px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+    .toc a{display:inline-block;margin:6px 10px 0 0;color:var(--text)}
+    .card{margin-top:14px;border:1px solid var(--line);border-radius:16px;background:rgba(15,27,51,.55);padding:16px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:10px;color:var(--muted);font-size:13px}
+    .tag{font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid rgba(94,234,212,.28);background:rgba(94,234,212,.06);color:var(--text)}
+    h2{margin:0 0 10px;font-size:18px}
+    h3{margin:14px 0 6px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+    ul{margin:8px 0 0 18px;padding:0} li{margin:6px 0}
+    .kpis{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+    .chip{font-size:12px;padding:6px 10px;border-radius:999px;border:1px dashed rgba(255,255,255,.22);color:var(--muted)}
+    .small{font-size:12px;color:var(--muted)}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
   </style>
 </head>
-
 <body>
   <div class="wrap">
-
     <header class="topbar">
       <h1>Case Studies</h1>
       <p>Selected work across enterprise customer IT, clinical workflows, and global technical operations.</p>
@@ -130,11 +57,41 @@
       </nav>
     </header>
 
-    <!-- CASE STUDY 4 (UPDATED) -->
-    <section class="card" id="unity-handover-2026">
+    <!-- This TOC ensures your existing links work: #cs1 ... #cs5 -->
+    <section class="toc" aria-label="Case study links">
+      <h2>Jump to</h2>
+      <a href="#cs1">CS1</a>
+      <a href="#cs2">CS2</a>
+      <a href="#cs3">CS3</a>
+      <a href="#cs4">CS4</a>
+      <a href="#cs5">CS5</a>
+    </section>
+
+    <!-- CS1–CS3 + CS5 are placeholders so your anchors aren't "broken".
+         Replace the titles/content later with your real case studies. -->
+    <section class="card" id="cs1">
+      <div class="meta"><span class="tag">CS1</span><span class="small">Placeholder</span></div>
+      <h2>Case Study 1 — Coming soon</h2>
+      <p class="small">Replace this section with your CS1 content. (Anchor: <strong>#cs1</strong>)</p>
+    </section>
+
+    <section class="card" id="cs2">
+      <div class="meta"><span class="tag">CS2</span><span class="small">Placeholder</span></div>
+      <h2>Case Study 2 — Coming soon</h2>
+      <p class="small">Replace this section with your CS2 content. (Anchor: <strong>#cs2</strong>)</p>
+    </section>
+
+    <section class="card" id="cs3">
+      <div class="meta"><span class="tag">CS3</span><span class="small">Placeholder</span></div>
+      <h2>Case Study 3 — Coming soon</h2>
+      <p class="small">Replace this section with your CS3 content. (Anchor: <strong>#cs3</strong>)</p>
+    </section>
+
+    <!-- CS4 (YOUR UPDATED CONTENT) -->
+    <section class="card" id="cs4">
       <div class="meta">
         <span class="tag">2026</span>
-        <span>Process + System Design</span>
+        <span>CS4 • Process + System Design</span>
         <span>•</span>
         <span>Global • Clinical Ops • Customer IT</span>
       </div>
@@ -192,6 +149,12 @@
       </div>
 
       <p class="small">Note: Details are summarized to protect customer confidentiality.</p>
+    </section>
+
+    <section class="card" id="cs5">
+      <div class="meta"><span class="tag">CS5</span><span class="small">Placeholder</span></div>
+      <h2>Case Study 5 — Coming soon</h2>
+      <p class="small">Replace this section with your CS5 content. (Anchor: <strong>#cs5</strong>)</p>
     </section>
 
     <footer>© <span id="y"></span> JP de Paula</footer>
