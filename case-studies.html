@@ -1,110 +1,65 @@
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Case Studies — JP de Paula</title>
   <meta name="description" content="Healthcare enterprise customer success case studies: implementation, adoption, reliability, and operational outcomes." />
-  <title>Case Studies | JP de Paula</title>
-  <meta name="description" content="Selected case studies highlighting enterprise customer IT, clinical workflows, and technical operations outcomes." />
-<style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 0; line-height: 1.55; }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 48px 20px; }
-    h1 { margin: 0 0 8px 0; font-size: 34px; }
-    .sub { color: #444; margin: 0 0 22px 0; }
-    .nav { margin: 10px 0 26px; }
-    .nav a { margin-right: 14px; }
-    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 18px 0 26px; }
-    .card { border: 1px solid #e6e6e6; border-radius: 14px; padding: 16px; }
-    .small { color:#555; font-size: 14px; margin: 8px 0 0; }
-    .tag { display:inline-block; border:1px solid #e6e6e6; border-radius:999px; padding:6px 10px; margin: 6px 6px 0 0; font-size:13px; }
-    hr { border: 0; border-top: 1px solid #eee; margin: 28px 0; }
-    a { color: inherit; }
-    ul { margin-top: 8px; }
+
+  <style>
+    /* Light theme (matches white-background site) */
     :root{
-      --bg:#0b1220;
-      --card:#0f1b33;
-      --text:#e9eefc;
-      --muted:#b9c3dd;
-      --line:rgba(255,255,255,.10);
-      --accent:#5eead4;
-      --accent2:#60a5fa;
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#444444;
+      --line:#e6e6e6;
+      --card:#ffffff;
+      --chip:#f6f6f6;
     }
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
     body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 15% 10%, rgba(96,165,250,.18), transparent 60%),
-                  radial-gradient(900px 700px at 85% 30%, rgba(94,234,212,.14), transparent 60%),
-                  var(--bg);
-      color:var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       line-height:1.55;
+      background: var(--bg);
+      color: var(--text);
     }
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
-    header{
-      display:flex;gap:14px;align-items:flex-start;justify-content:space-between;
-      padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(15,27,51,.65);
-      backdrop-filter: blur(8px);
-    }
-    .title h1{margin:0 0 6px;font-size:26px;letter-spacing:.2px}
-    .title p{margin:0;color:var(--muted)}
-    .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .pill{
-      font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);
-      color:var(--muted);background:rgba(255,255,255,.03)
-    }
-    .nav{
-      display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;
-      font-size:13px;color:var(--muted)
-    }
-    .nav a{
-      text-decoration:none;border:1px solid var(--line);padding:8px 10px;border-radius:12px;
-      background:rgba(255,255,255,.03)
-    }
-    .nav a:hover{border-color:rgba(255,255,255,.22)}
-    main{margin-top:18px;display:grid;gap:14px}
-    .card{
-      border:1px solid var(--line);border-radius:18px;background:rgba(15,27,51,.55);
-      padding:18px 18px 16px;
-    }
-    .card h2{margin:0 0 8px;font-size:18px}
-    .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px;margin:0 0 12px}
-    .meta span{display:inline-flex;gap:6px;align-items:center}
-    .badge{
-      display:inline-flex;gap:8px;align-items:center;font-size:12px;
-      padding:6px 10px;border-radius:12px;border:1px solid rgba(94,234,212,.25);
-      color:var(--text);background:rgba(94,234,212,.06)
-    }
-    .badge.blue{border-color:rgba(96,165,250,.25);background:rgba(96,165,250,.07)}
+    a{ color: inherit; }
+    .wrap{ max-width: 980px; margin: 0 auto; padding: 48px 20px; }
+    h1{ margin:0 0 8px 0; font-size: 34px; }
+    .sub{ color: var(--muted); margin: 0 0 22px 0; }
+    .nav{ margin: 10px 0 26px; }
+    .nav a{ margin-right: 14px; }
     .grid{
-      display:grid;gap:12px;
-      grid-template-columns: repeat(12, 1fr);
+      display:grid;
+      gap:14px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin: 18px 0 26px;
     }
-    .col6{grid-column:span 6}
-    .col12{grid-column:span 12}
-    @media (max-width:780px){
-      header{flex-direction:column}
-      .nav{justify-content:flex-start}
-      .col6{grid-column:span 12}
+    .card{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      background: var(--card);
     }
-    h3{margin:0 0 6px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
-    ul{margin:8px 0 0 18px;padding:0}
-    li{margin:6px 0}
-    .kpi{
-      display:flex;flex-wrap:wrap;gap:10px;margin-top:10px
+    .small{ color:#555; font-size:14px; margin: 8px 0 0; }
+    .tag{
+      display:inline-block;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      margin: 6px 6px 0 0;
+      font-size:13px;
+      background: var(--chip);
     }
-    .kpi .chip{
-      font-size:12px;border:1px dashed rgba(255,255,255,.22);
-      border-radius:999px;padding:6px 10px;color:var(--muted)
-    }
-    footer{
-      margin-top:18px;color:var(--muted);font-size:13px;text-align:center
-    }
-    .small{font-size:12px;color:var(--muted)}
-    code{background:rgba(255,255,255,.05);padding:2px 6px;border-radius:8px;border:1px solid var(--line)}
-</style>
+    hr{ border:0; border-top:1px solid #eee; margin: 28px 0; }
+    ul{ margin-top:8px; }
+  </style>
 </head>
+
 <body>
-<div class="wrap">
+  <div class="wrap">
     <h1>Case Studies</h1>
     <p class="sub">
       Selected examples of enterprise customer success outcomes in regulated healthcare environments.
@@ -243,18 +198,7 @@
         <span class="tag">Time-to-Resolution</span>
         <span class="tag">Regional Enablement</span>
         <span class="tag">Customer Outcomes</span>
-    <header>
-      <div class="title">
-        <h1>Case Studies</h1>
-        <p>Selected work across enterprise customer IT, clinical workflows, and global technical operations.</p>
-        <div class="pillrow">
-          <span class="pill">Healthcare • Enterprise</span>
-          <span class="pill">Clinical Workflows</span>
-          <span class="pill">Customer IT & Networking</span>
-          <span class="pill">Go-Live Readiness</span>
-          <span class="pill">Tier-3/4 Escalations</span>
-        </div>
-</div>
+      </div>
 
       <p style="margin-top:12px;"><strong>Context</strong></p>
       <p>
@@ -324,7 +268,7 @@
     <h2 id="cs5">5) Unity Connectivity Playbook (Pilot, 2026)</h2>
     <div class="card">
       <p><strong>Role:</strong> MR Linac Systems Specialist (Oct 2023–Present)</p>
-      <p><strong>Tool:</strong> Smartsheet template </p>
+      <p><strong>Tool:</strong> Smartsheet template</p>
       <p><strong>Stage:</strong> Deployed ~1 month ago; pilot rollout with Systems Specialists + PMs</p>
 
       <div>
@@ -373,103 +317,6 @@
     </div>
 
     <p class="small" style="margin-top: 18px;">© jpdepaula.com • Client details anonymized for confidentiality.</p>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="case-studies.html" aria-current="page">Case Studies</a>
-        <a href="resume.pdf">Resume (PDF)</a>
-      </nav>
-    </header>
-
-    <main>
-
-      <!-- CASE STUDY 4 -->
-      <section class="card" id="unity-handover-2026">
-        <div class="meta">
-          <span class="badge">2026</span>
-          <span class="badge blue">Process + System Design</span>
-          <span>Global • Clinical Ops • Customer IT</span>
-        </div>
-
-        <h2>Unity Connectivity Handover System — Enabling Clinical Ops Training &amp; Go-Lives</h2>
-
-        <div class="grid">
-          <div class="col6">
-            <h3>Context</h3>
-            <p>
-              Clinical Operations required site-specific hospital IT and network details to complete
-              project milestones, plan onsite training, and execute safe go-lives. Data lived across
-              multiple owners and channels, creating repeated follow-ups and delays.
-            </p>
-          </div>
-
-          <div class="col6">
-            <h3>My Role</h3>
-            <p>
-              Designed and implemented the global handover approach as an individual contributor,
-              aligning Clinical Ops needs with Systems Specialists inputs and escalation workflows.
-            </p>
-          </div>
-
-          <div class="col6">
-            <h3>Problem</h3>
-            <ul>
-              <li>Site connectivity data was fragmented across people, threads, and documents.</li>
-              <li>Clinical Ops had to contact Systems Specialists repeatedly for the same site inputs.</li>
-              <li>Milestone completion and training readiness were blocked by missing/unclear data.</li>
-            </ul>
-          </div>
-
-          <div class="col6">
-            <h3>Solution</h3>
-            <ul>
-              <li>Built a Teams-based dataset to centralize the full Clinical Ops connectivity data set per site.</li>
-              <li>Standardized fields and a handover checklist so inputs were complete and consistent.</li>
-              <li>Defined ownership and timing so data was available ahead of milestones, training, and go-live.</li>
-            </ul>
-          </div>
-
-          <div class="col12">
-            <h3>Impact</h3>
-            <ul>
-              <li>Reduced repeat outreach to Systems Specialists and eliminated “hunt for info” across channels.</li>
-              <li>Improved predictability for project milestones, onsite clinical training planning, and go-live readiness.</li>
-              <li>Adopted across <strong>10+ sites since Jan 2026</strong> (and expanding as additional sites enter trial).</li>
-            </ul>
-            <div class="kpi">
-              <span class="chip">10+ sites since Jan 2026</span>
-              <span class="chip">Single source of truth</span>
-              <span class="chip">Milestones → Training → Go-Live</span>
-              <span class="chip">Less rework &amp; follow-ups</span>
-            </div>
-            <p class="small">
-              Note: Details are summarized to protect customer confidentiality.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Placeholder for other case studies (keep or replace with your existing content) -->
-      <section class="card" id="more">
-        <h2>More case studies</h2>
-        <p class="small">
-          If you already have additional case studies on your current site, paste them here or send me your
-          existing <code>case-studies.html</code> and I’ll merge everything without changing your layout.
-        </p>
-        <ul>
-          <li>Add your other case studies above/below this block.</li>
-          <li>Keep each case study as a <code>&lt;section class=&quot;card&quot;&gt;</code> for consistent styling.</li>
-        </ul>
-      </section>
-
-    </main>
-
-    <footer>
-      <div>© <span id="y"></span> JP de Paula</div>
-    </footer>
-</div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 </html>
