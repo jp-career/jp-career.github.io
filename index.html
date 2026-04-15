@@ -1,110 +1,345 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>JP de Paula — Healthcare IT & Clinical Systems Leader</title>
-<style>
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;line-height:1.5;background:#fff;color:#111;}
-.wrap{max-width:1100px;margin:0 auto;padding:40px 20px;}
-.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;}
-.nav a{margin-left:16px;text-decoration:none;color:#111;font-size:14px;}
-.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start;}
-h1{font-size:38px;line-height:1.2;margin:0;}
-.sub{color:#444;margin-top:18px;font-size:16px;}
-.section{margin-top:50px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;}
-.card{border:1px solid #e6e6e6;border-radius:12px;padding:18px;}
-.small{color:#555;font-size:14px;}
-@media(max-width:900px){.hero{grid-template-columns:1fr;}}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Case Studies — JP de Paula</title>
+  <meta name="description" content="Selected case studies in healthcare IT modernization, clinical systems delivery, reliability, and infrastructure planning." />
+  <style>
+    :root{
+      --bg:#f5f9ff;
+      --hero:#eff6ff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#dbe5f4;
+      --card:#ffffff;
+      --blue:#2563eb;
+      --blue-2:#1d4ed8;
+      --pill-bg:#eff6ff;
+      --pill-text:#1d4ed8;
+      --pill-line:#bfdbfe;
+      --shadow:0 12px 30px rgba(37,99,235,.08);
+      --radius:22px;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,#f5f9ff 0%, #ffffff 100%);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{text-decoration:none; color:inherit}
+    .hero{
+      background:linear-gradient(135deg,#f8fbff 0%, #eef5ff 100%);
+      border-bottom:1px solid var(--line);
+      padding:42px 0 34px;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+    .nav a{
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--pill-line);
+      color:var(--blue-2);
+      font-size:.95rem;
+      font-weight:700;
+    }
+    h1{
+      margin:0;
+      font-size:clamp(2rem,4.4vw,3.4rem);
+      line-height:1.08;
+      letter-spacing:-.03em;
+      color:var(--text);
+    }
+    .accent{color:var(--blue)}
+    .intro{
+      max-width:76ch;
+      color:var(--muted);
+      margin:14px 0 0;
+      font-size:1.04rem;
+    }
+    .section{
+      margin:28px auto 0;
+    }
+    .teasers{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:18px;
+    }
+    .teaser,.case{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .teaser{
+      border-top:4px solid var(--blue);
+    }
+    .teaser h2,.case h2{
+      margin:0 0 10px;
+      font-size:1.3rem;
+      color:var(--text);
+      letter-spacing:-.02em;
+    }
+    .teaser p,.case p,.case li{
+      color:var(--muted);
+    }
+    .jump{
+      display:inline-block;
+      margin-top:10px;
+      color:var(--blue);
+      font-weight:800;
+    }
+    .meta{
+      margin:8px 0;
+      color:#334155;
+      font-size:.98rem;
+    }
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      list-style:none;
+      padding:0;
+      margin:12px 0 0;
+    }
+    .tags li{
+      padding:8px 12px;
+      border-radius:999px;
+      background:var(--pill-bg);
+      color:var(--pill-text);
+      border:1px solid var(--pill-line);
+      font-size:.9rem;
+      font-weight:700;
+    }
+    .case{
+      margin-top:18px;
+      scroll-margin-top:90px;
+    }
+    .case h3{
+      margin:18px 0 8px;
+      font-size:1.02rem;
+      color:var(--text);
+    }
+    .case ul{
+      margin:.25rem 0 0;
+      padding-left:1.15rem;
+    }
+    footer{
+      margin-top:38px;
+      padding:22px 0 40px;
+      border-top:1px solid var(--line);
+      color:#64748b;
+      font-size:.95rem;
+      background:#fff;
+    }
+    @media (max-width:800px){
+      .teasers{grid-template-columns:1fr}
+      .teaser,.case{padding:18px}
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
+  <header class="hero">
+    <div class="wrap">
+      <h1>Case <span class="accent">Studies</span></h1>
+      <p class="intro">
+        Selected examples of healthcare IT modernization, clinical systems delivery, escalation leadership,
+        and infrastructure planning in regulated and operationally complex environments.
+      </p>
+      <nav class="nav" aria-label="Case studies navigation">
+        <a href="/">Home</a>
+        <a href="#fremont">Fremont</a>
+        <a href="#imaging">Imaging Clinic</a>
+        <a href="#latam">LATAM Delivery</a>
+        <a href="#reliability">Reliability</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="nav">
-<strong>JP de Paula</strong>
-<div>
-<a href="#impact">Impact</a>
-<a href="/case-studies.html">Case Studies</a>
-<a href="/resume.pdf">Resume</a>
-<a href="mailto:jeanbrz@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/jp-de-paula-b305a33b0/">LinkedIn</a>
-</div>
-</div>
+  <main class="wrap">
+    <section class="section teasers" aria-label="Case study summary list">
+      <article class="teaser">
+        <h2>Fremont Medical Center: Legacy-to-Modern Healthcare IT Transformation</h2>
+        <p>
+          Advanced from hands-on IT to Director of Information Systems while helping modernize a multi-site healthcare environment across infrastructure, communications, security, and systems readiness.
+        </p>
+        <a class="jump" href="#fremont">Read case study</a>
+      </article>
 
-<div class="hero">
-<div>
-<h1>
-Healthcare IT & Clinical Systems Leadership<br/>
-Across Complex, Multi-Site Environments
-</h1>
+      <article class="teaser">
+        <h2>Imaging Clinic: Infrastructure Blueprint, Deployment Planning & Go-Live Support Model</h2>
+        <p>
+          Built a structured infrastructure proposal and delivery model for a new imaging center, covering technical-room architecture, servers, domain services, backup, contingency, remote support, and stabilization planning.
+        </p>
+        <a class="jump" href="#imaging">Read case study</a>
+      </article>
 
-<p class="sub">
-I lead end-to-end healthcare technology initiatives across hospital and clinical environments — from infrastructure and construction readiness through system implementation, go-live, and operational stabilization across US and LATAM.
-</p>
+      <article class="teaser">
+        <h2>LATAM Clinical Systems Delivery</h2>
+        <p>
+          Standardized execution across complex multi-country healthcare technology deployments involving internal teams, distributors, and customer stakeholders.
+        </p>
+        <a class="jump" href="#latam">Read case study</a>
+      </article>
 
-<p class="sub">
-My work sits at the intersection of healthcare IT, clinical systems, and operational execution — aligning technical teams, clinical stakeholders, and business leadership to deliver reliable, scalable outcomes.
-</p>
-</div>
+      <article class="teaser">
+        <h2>Reliability Turnaround in a High-Risk Environment</h2>
+        <p>
+          Helped drive cross-functional alignment and technical adaptation to protect uptime, customer confidence, and long-term supportability.
+        </p>
+        <a class="jump" href="#reliability">Read case study</a>
+      </article>
+    </section>
 
-<div class="card">
-<h3>What I bring</h3>
+    <section id="fremont" class="case">
+      <h2>1) Fremont Medical Center: Legacy-to-Modern Healthcare IT Transformation</h2>
+      <p class="meta"><strong>Organization:</strong> Fremont Medical Center</p>
+      <p class="meta"><strong>Role progression:</strong> IT Assistant → Network Administrator → IT Manager → Director of Information Systems</p>
+      <p class="meta"><strong>Environment:</strong> Multi-site healthcare operations</p>
 
-<p><strong>Hospital + vendor-side experience</strong><br/>
-Hands-on leadership across internal healthcare IT and enterprise clinical systems delivery.</p>
+      <ul class="tags" aria-label="Tags">
+        <li>Healthcare IT Transformation</li>
+        <li>Infrastructure Modernization</li>
+        <li>EMR Readiness</li>
+        <li>Multi-Site Operations</li>
+        <li>Leadership</li>
+      </ul>
 
-<p><strong>US & LATAM execution</strong><br/>
-Proven ability to operate across countries, distributors, customer IT, and clinical teams.</p>
+      <h3>Context</h3>
+      <p>
+        When I joined Fremont Medical Center, the organization was still operating on a legacy environment with outdated communications and connectivity patterns across facilities. The business needed a more modern, reliable, and supportable IT foundation to improve operations and prepare for future clinical technology adoption.
+      </p>
 
-<p><strong>From build to go-live</strong><br/>
-Experience supporting environments from construction phase through full operational readiness.</p>
+      <h3>My role</h3>
+      <p>
+        I started in a hands-on IT role and progressed into leadership, ultimately serving as Director of Information Systems and reporting to the COO. I led modernization across infrastructure, connectivity, communications, systems administration, vendor coordination, and technology planning.
+      </p>
 
-<p><strong>Escalation & reliability leadership</strong><br/>
-Stabilizing high-risk environments and improving long-term system performance.</p>
+      <h3>What I did</h3>
+      <ul>
+        <li>Designed and implemented a modern Microsoft ecosystem to replace fragile legacy patterns.</li>
+        <li>Built and modernized the network foundation across facilities.</li>
+        <li>Implemented proxy, backup, firewall, VPN, and redundancy solutions to improve resilience and business continuity.</li>
+        <li>Planned and deployed a new phone system across facilities.</li>
+        <li>Worked closely on EMR evaluation, vendor selection, planning, and implementation readiness.</li>
+      </ul>
 
-<p><strong>Built for regulated environments</strong><br/>
-Experienced navigating healthcare compliance, workflows, and operational constraints.</p>
-</div>
-</div>
+      <h3>Outcome</h3>
+      <ul>
+        <li>Helped move the organization from a fragile legacy environment to a more modern healthcare IT foundation.</li>
+        <li>Improved communications, security, continuity, and cross-site operational reliability.</li>
+        <li>Elevated IT into a stronger operational enabler for the organization.</li>
+      </ul>
+    </section>
 
-<div class="section" id="impact">
-<h2>Selected Impact</h2>
+    <section id="imaging" class="case">
+      <h2>2) Imaging Clinic: Infrastructure Blueprint, Deployment Planning & Go-Live Support Model</h2>
+      <p class="meta"><strong>Organization:</strong> New imaging center / diagnostic imaging environment</p>
+      <p class="meta"><strong>Scope:</strong> New infrastructure design, deployment planning, contingency, backup, remote support, and post-go-live support model</p>
+      <p class="meta"><strong>Project model:</strong> Central technical room, 2-server continuity approach, NAS backup, segmented network, staged deployment and final cutover</p>
 
-<div class="grid">
-<div class="card">
-<strong>Hospital IT modernization</strong>
-<p class="small">Transformed legacy infrastructure into secure, scalable multi-site environments supporting clinical operations.</p>
-</div>
+      <ul class="tags" aria-label="Tags">
+        <li>Imaging IT Infrastructure</li>
+        <li>Deployment Planning</li>
+        <li>Business Proposal & Technical Design</li>
+        <li>Go-Live Readiness</li>
+        <li>Continuity & Backup</li>
+      </ul>
 
-<div class="card">
-<strong>Clinical systems delivery</strong>
-<p class="small">Led implementations across multiple countries, aligning technical, clinical, and operational stakeholders.</p>
-</div>
+      <h3>Context</h3>
+      <p>
+        For a new imaging clinic environment, the challenge was not just supporting day-to-day IT. The work required a defensible infrastructure strategy from the beginning: technical-room architecture, network segmentation, server and domain planning, backup and recovery, operational continuity, and a practical model for staging, cutover, and support.
+      </p>
 
-<div class="card">
-<strong>Construction to go-live execution</strong>
-<p class="small">Supported new clinical environments from early infrastructure planning through full system readiness and activation.</p>
-</div>
+      <h3>My role</h3>
+      <p>
+        I developed the business proposal and technical deployment model for the environment, translating operational needs into a structured implementation plan designed to reduce risk, improve supportability, and create a stable foundation for clinical operations.
+      </p>
 
-<div class="card">
-<strong>Escalation and reliability</strong>
-<p class="small">Resolved complex technical challenges and improved system stability in high-risk deployments.</p>
-</div>
+      <h3>What I designed and structured</h3>
+      <ul>
+        <li>Centralized infrastructure model with the main technical room on the 3rd floor, including rack, firewall, switches, UPS, storage, and core support components.</li>
+        <li>2-server continuity approach with a primary environment and additional contingency capacity to reduce operational risk.</li>
+        <li>Microsoft domain services, DNS, user and permissions model, and initial workstation / printer integration plan.</li>
+        <li>NAS-based local backup, optional cloud copy, recovery validation, and post-go-live support options.</li>
+        <li>Segmented network model for infrastructure, workstations, cameras, guest Wi-Fi, management, and backup paths.</li>
+        <li>Staging-first deployment approach with final site cutover, remote support path through VPN / iDRAC / Proxmox / guest access, and documented runbook guidance.</li>
+      </ul>
 
-<div class="card">
-<strong>Operational systems</strong>
-<p class="small">Designed processes improving handovers, visibility, and execution consistency across teams.</p>
-</div>
+      <h3>Why it matters</h3>
+      <p>
+        This project shows how I approach healthcare technology work beyond break-fix support: by structuring the environment from the ground up so implementation, go-live, and ongoing support can happen with less improvisation, better recovery options, and clearer operational ownership.
+      </p>
+    </section>
 
-<div class="card">
-<strong>Cross-regional coordination</strong>
-<p class="small">Delivered projects across US and LATAM environments with distributed teams and stakeholders.</p>
-</div>
-</div>
-</div>
+    <section id="latam" class="case">
+      <h2>3) LATAM Clinical Systems Delivery</h2>
+      <p class="meta"><strong>Environment:</strong> Multi-country healthcare technology delivery across LATAM</p>
 
-</div>
+      <ul class="tags" aria-label="Tags">
+        <li>Implementation Leadership</li>
+        <li>Regional Delivery</li>
+        <li>Distributor Coordination</li>
+        <li>Go-Live Readiness</li>
+        <li>Operational Predictability</li>
+      </ul>
+
+      <h3>Context</h3>
+      <p>
+        Delivery across LATAM required consistency across distributors, regulatory constraints, construction readiness variability, and cross-border logistics. Success depended on keeping projects aligned from pre-sales through installation, go-live, and transition into support.
+      </p>
+
+      <h3>What I did</h3>
+      <ul>
+        <li>Standardized execution and handoffs across the project lifecycle.</li>
+        <li>Coordinated internal teams, distributors, and customer stakeholders across multiple countries.</li>
+        <li>Improved readiness visibility and execution consistency through structured milestones and documentation.</li>
+      </ul>
+    </section>
+
+    <section id="reliability" class="case">
+      <h2>4) Reliability Turnaround in a High-Risk Environment</h2>
+      <p class="meta"><strong>Environment:</strong> Complex deployment with non-standard technical constraints</p>
+
+      <ul class="tags" aria-label="Tags">
+        <li>Escalation Leadership</li>
+        <li>Reliability Improvement</li>
+        <li>Cross-Functional Alignment</li>
+        <li>Customer Confidence</li>
+      </ul>
+
+      <h3>Context</h3>
+      <p>
+        A high-risk environment introduced technical requirements outside standard deployment assumptions, threatening long-term reliability and customer confidence.
+      </p>
+
+      <h3>What I did</h3>
+      <ul>
+        <li>Aligned installation, engineering, operations, and customer-facing teams around a realistic path forward.</li>
+        <li>Supported technical adaptation and structured communication through go-live preparation.</li>
+        <li>Kept the focus on long-term supportability, not just short-term schedule pressure.</li>
+      </ul>
+
+      <h3>Outcome</h3>
+      <p>
+        The environment moved toward a more stable and supportable operating state, improving reliability and trust.
+      </p>
+    </section>
+
+    <footer>
+      © jpdepaula.com • Selected client details are anonymized where needed for confidentiality.
+    </footer>
+  </main>
 </body>
 </html>
