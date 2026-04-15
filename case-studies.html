@@ -4,282 +4,263 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Case Studies — JP de Paula</title>
-  <meta name="description" content="Selected healthcare IT and clinical systems case studies covering hospital modernization, regional implementations, escalations, and operational improvement across US and LATAM environments." />
+  <meta name="description" content="Healthcare IT and clinical systems case studies across hospital modernization, regional delivery, escalations, and operational improvement." />
   <style>
     :root{
-      --bg:#ffffff;
+      --bg:#f7f8fa;
+      --surface:#ffffff;
       --text:#0f172a;
       --muted:#475569;
-      --line:#e2e8f0;
-      --soft:#f8fafc;
-      --accent:#0f4c81;
-      --accent-soft:#eff6ff;
-      --card:#ffffff;
-      --shadow:0 12px 32px rgba(15,23,42,.06);
-      --radius:18px;
+      --line:#dbe2ea;
+      --chip:#eef4fb;
+      --accent:#0b4a8b;
       --max:1080px;
+      --radius:20px;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.65;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
       color:var(--text);
-      background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+      line-height:1.62;
     }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 72px}
-    .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:24px}
-    .navlinks{display:flex;flex-wrap:wrap;gap:16px}
-    .brand{font-weight:700;color:var(--text)}
-    .hero,.card{
-      background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 20px 60px}
+    .topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
+    .nav{display:flex;flex-wrap:wrap;gap:16px}
+    h1{margin:0 0 8px;font-size:clamp(2rem,4vw,2.7rem);letter-spacing:-.03em}
+    h2{margin:0 0 12px;font-size:clamp(1.45rem,2.7vw,1.9rem);letter-spacing:-.03em}
+    h3{margin:0 0 10px;font-size:1.06rem}
+    .sub{margin:10px 0 0;color:var(--muted);max-width:70ch}
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
     }
-    .hero{padding:32px}
-    .eyebrow{display:inline-block;padding:7px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700;margin-bottom:14px}
-    h1{font-size:clamp(34px,5vw,52px);line-height:1.08;margin:0 0 12px}
-    .sub{font-size:18px;color:var(--muted);margin:0}
-    .quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:26px}
-    .card{padding:22px}
-    .card strong{display:block;font-size:18px;margin-bottom:8px}
-    .small{font-size:14px;color:var(--muted)}
-    .section-title{font-size:30px;line-height:1.12;margin:0 0 12px}
-    .case{margin-top:28px;padding:28px}
-    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
-    .tag{display:inline-block;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13px;color:#334155}
-    .tag.blue{background:var(--accent-soft);border-color:#cfe1f6;color:var(--accent)}
-    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    h2{font-size:28px;line-height:1.15;margin:0 0 14px}
-    h3{font-size:18px;margin:0 0 8px}
-    p{margin:0 0 12px}
-    ul{margin:0;padding-left:20px}
-    li{margin:0 0 8px}
-    .note{background:var(--soft);border:1px solid var(--line);padding:16px;border-radius:14px;color:#334155}
-    .contact{margin-top:32px}
-    footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-    @media (max-width: 900px){
-      .quick,.grid-2{grid-template-columns:1fr}
-      .nav{flex-direction:column;align-items:flex-start}
-      .hero,.card,.case{padding:22px}
+    .jump-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:22px 0 24px}
+    .small{margin:8px 0 0;color:var(--muted)}
+    .tag{
+      display:inline-block;
+      padding:7px 11px;
+      margin:6px 8px 0 0;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:var(--chip);
+      font-size:13px;
+    }
+    .case{margin-top:22px}
+    .case p{margin:.5rem 0}
+    .case ul{margin:.4rem 0 0 1.2rem;padding:0}
+    .case li{margin:.45rem 0}
+    hr{border:none;border-top:1px solid var(--line);margin:22px 0}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 10px;color:var(--muted);font-size:13px}
+    .badge{display:inline-block;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:var(--chip);color:var(--text)}
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .grid2 .col{border:1px solid #edf2f7;border-radius:14px;padding:16px;background:#fff}
+    .grid2 .full{grid-column:1/-1}
+    footer{margin-top:24px;color:var(--muted);font-size:14px}
+    @media (max-width: 820px){
+      .wrap{padding:20px 16px 44px}
+      .jump-grid,.grid2{grid-template-columns:1fr}
+      .card{padding:20px}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <nav class="nav">
-      <div class="brand">JP de Paula</div>
-      <div class="navlinks">
+    <div class="topbar">
+      <div>
+        <h1>Case Studies</h1>
+        <p class="sub">Selected examples of healthcare IT, clinical systems, and cross-regional delivery work that best support my future direction. Client details are anonymized for confidentiality.</p>
+      </div>
+      <nav class="nav">
         <a href="/">Home</a>
         <a href="/resume.pdf">Resume</a>
         <a href="mailto:jeanbrz@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/jp-de-paula-b305a33b0/">LinkedIn</a>
-      </div>
-    </nav>
-
-    <div class="hero">
-      <div class="eyebrow">Case Studies</div>
-      <h1>Proof of work across hospital IT, clinical systems, escalations, and regional delivery</h1>
-      <p class="sub">
-        These case studies are selected to support my future direction: healthcare IT leadership, clinical systems delivery, operational improvement, and cross-regional execution across US and LATAM environments.
-      </p>
+      </nav>
     </div>
 
-    <div class="quick">
+    <div class="jump-grid">
       <div class="card">
-        <strong>Fremont Medical Center</strong>
-        <p class="small">Hospital modernization and leadership growth from hands-on IT to director-level responsibility.</p>
-        <p style="margin-top:12px;"><a href="#fremont">Jump to case</a></p>
+        <strong>Fremont Medical Center Transformation</strong>
+        <p class="small">Hospital-side modernization across infrastructure, communications, security, continuity, and EMR readiness.</p>
+        <a href="#cs1">Jump to case</a>
       </div>
       <div class="card">
-        <strong>LATAM Delivery Playbook</strong>
-        <p class="small">Regional implementation discipline in regulated healthcare technology environments.</p>
-        <p style="margin-top:12px;"><a href="#latam">Jump to case</a></p>
+        <strong>LATAM Clinical Systems Delivery Playbook</strong>
+        <p class="small">Regional execution model spanning pre-sales, installation, go-live, and transition to support.</p>
+        <a href="#cs2">Jump to case</a>
       </div>
       <div class="card">
-        <strong>La Paz Reliability Turnaround</strong>
-        <p class="small">Cross-functional adaptation and trust recovery in a technically difficult deployment.</p>
-        <p style="margin-top:12px;"><a href="#lapaz">Jump to case</a></p>
+        <strong>Radixact La Paz Reliability Turnaround</strong>
+        <p class="small">Escalation leadership and technical adaptation in a high-risk environment.</p>
+        <a href="#cs3">Jump to case</a>
       </div>
       <div class="card">
-        <strong>Unity Handover System</strong>
-        <p class="small">Operational workflow design that reduced repeated follow-up and improved readiness.</p>
-        <p style="margin-top:12px;"><a href="#unity">Jump to case</a></p>
+        <strong>Unity Connectivity Handover System</strong>
+        <p class="small">Operational process design to improve readiness, training preparation, and cross-team coordination.</p>
+        <a href="#cs4">Jump to case</a>
       </div>
     </div>
 
-    <section class="case card" id="fremont">
-      <div class="meta">
-        <span class="tag blue">Hospital IT Modernization</span>
-        <span class="tag">Multi-Site Operations</span>
-        <span class="tag">Leadership Growth</span>
-        <span class="tag">Healthcare Environment</span>
-      </div>
+    <section class="case card" id="cs1">
       <h2>1) Fremont Medical Center — Legacy-to-Modern Healthcare IT Transformation</h2>
-      <div class="grid-2">
-        <div>
-          <h3>Context</h3>
-          <p>
-            When I joined Fremont Medical Center, the environment reflected an older era of healthcare IT: a legacy dumb-terminal practice management and billing setup, DSL connectivity between facilities, and decentralized dial-up email. The organization needed not just technical upgrades, but a practical modernization path that would support operations across multiple facilities and enable future growth.
-          </p>
-          <h3>My role</h3>
-          <p>
-            I joined as an IT Assistant, progressed to Network Administrator, then IT Manager, and ultimately Director of Information Systems. Over time, I moved from hands-on technical execution into broader responsibility for infrastructure, systems planning, vendor coordination, and operational support aligned with leadership priorities.
-          </p>
-        </div>
-        <div>
-          <h3>What I led</h3>
-          <ul>
-            <li>Developed and modernized the organization’s network foundation across facilities.</li>
-            <li>Implemented Microsoft-based infrastructure, including Windows Server and Exchange.</li>
-            <li>Introduced more mature backup, firewall, proxy, VPN, and redundancy capabilities.</li>
-            <li>Supported implementation of an updated phone system across locations.</li>
-            <li>Worked closely on EMR selection and implementation planning.</li>
-            <li>Aligned technical improvements with business, operational, and leadership needs.</li>
-          </ul>
-        </div>
+      <p><strong>Organization:</strong> Fremont Medical Center</p>
+      <p><strong>Career progression:</strong> IT Assistant → Network Administrator → IT Manager → Director of Information Systems</p>
+      <p><strong>Environment:</strong> Multi-facility healthcare organization transitioning from legacy systems and limited connectivity into a more modern operational model</p>
+      <div>
+        <span class="tag">Hospital IT Leadership</span>
+        <span class="tag">Infrastructure Modernization</span>
+        <span class="tag">Multi-Site Operations</span>
+        <span class="tag">Clinical Systems Readiness</span>
+        <span class="tag">Executive Partnership</span>
       </div>
-      <h3>Why this case matters</h3>
-      <p>
-        This case anchors my portfolio because it demonstrates more than technical support. It shows my ability to operate inside a healthcare organization, understand how IT decisions affect day-to-day operations, and grow into broader leadership responsibility while helping move a legacy environment into a more modern, reliable model.
-      </p>
-      <div class="note">
-        <strong>Strategic value:</strong> This case shows hospital-side credibility, modernization leadership, and a career path built on both execution and increasing scope.
-      </div>
+
+      <p><strong>Context</strong></p>
+      <p>When I joined Fremont Medical Center, the organization was operating with an older dumb-terminal practice management and billing environment, DSL-based links between facilities, and decentralized dial-up email. The overall IT foundation needed modernization to better support operations, communications, resilience, and future clinical systems direction.</p>
+
+      <p><strong>My role</strong></p>
+      <p>I grew with the organization from hands-on technical support into IT leadership, eventually reporting at the executive level. Along the way, I helped define, plan, and implement the transition from a limited legacy environment into a more modern and supportable healthcare IT model.</p>
+
+      <p><strong>What I led</strong></p>
+      <ul>
+        <li>Helped develop and modernize the network environment across facilities.</li>
+        <li>Implemented core Microsoft infrastructure including Windows Server and Exchange.</li>
+        <li>Introduced backup, firewall, proxy, VPN, and redundancy solutions to improve operational resilience.</li>
+        <li>Supported rollout of a new phone system across facilities.</li>
+        <li>Worked closely on EMR vendor selection and implementation readiness.</li>
+        <li>Bridged technical execution with operational and leadership priorities as responsibilities expanded.</li>
+      </ul>
+
+      <p><strong>Why this matters</strong></p>
+      <p>This experience gave me a hospital-side foundation that still shapes how I work today: practical execution, infrastructure awareness, leadership growth, and an understanding that healthcare technology only succeeds when it supports real operational and clinical environments.</p>
     </section>
 
-    <section class="case card" id="latam">
-      <div class="meta">
-        <span class="tag blue">Clinical Systems Delivery</span>
-        <span class="tag">US &amp; LATAM</span>
+    <hr />
+
+    <section class="case card" id="cs2">
+      <h2>2) LATAM Clinical Systems Delivery Playbook</h2>
+      <p><strong>Company:</strong> Accuray (LATAM)</p>
+      <p><strong>Products:</strong> CyberKnife • Radixact • TomoTherapy • TomoReNew</p>
+      <p><strong>Scope:</strong> Participated in all installs across a multi-country LATAM footprint from 2012–2023</p>
+      <div>
+        <span class="tag">Regional Delivery Leadership</span>
+        <span class="tag">Regulated Healthcare</span>
         <span class="tag">Distributor Coordination</span>
         <span class="tag">Go-Live Readiness</span>
+        <span class="tag">Forecast Discipline</span>
       </div>
-      <h2>2) LATAM Delivery Playbook — Standardizing Clinical Systems Execution Across the Region</h2>
-      <div class="grid-2">
-        <div>
-          <h3>Context</h3>
-          <p>
-            Delivering complex healthcare technology across LATAM required coordination across distributors, customer leadership, clinical stakeholders, regulatory considerations, construction variability, and cross-border logistics. Success depended on making execution more consistent from pre-sales through installation, clinical readiness, go-live, and transition into service.
-          </p>
-          <h3>My role</h3>
-          <p>
-            I participated in all regional installs across a multi-country LATAM footprint from 2012 to 2023 and helped drive end-to-end execution from pre-sales through go-live. My role required alignment across internal teams, distributors, and customer stakeholders across technical, operational, executive, and clinical functions.
-          </p>
-        </div>
-        <div>
-          <h3>What I did</h3>
-          <ul>
-            <li>Standardized execution and handoff practices across the delivery lifecycle.</li>
-            <li>Used Salesforce for milestone visibility and Smartsheet for detailed execution management.</li>
-            <li>Controlled readiness and closeout quality through governed checklist processes.</li>
-            <li>Coordinated among installation, physics, engineering, operations, quality, distributor teams, and customer stakeholders.</li>
-            <li>Improved discipline around readiness, communication, and project follow-through.</li>
-          </ul>
-        </div>
-      </div>
-      <h3>Results</h3>
+
+      <p><strong>Context</strong></p>
+      <p>Successful delivery in LATAM required alignment across distributors, construction readiness, regulatory constraints, logistics, technical teams, and customer stakeholders. Predictability mattered not just for installation, but also for go-live planning, warranty transition, and customer confidence.</p>
+
+      <p><strong>My role</strong></p>
+      <p>I supported execution from pre-sales through installation and go-live, while helping ensure readiness for warranty and service handoff. My work required close coordination across internal teams, distributors, and customer executives, technical leads, and clinical stakeholders.</p>
+
+      <p><strong>What I did</strong></p>
       <ul>
-        <li>Improved install efficiency and overall project quality.</li>
-        <li>Reduced avoidable parts replacement by strengthening execution quality.</li>
-        <li>Improved forecast variance from roughly 12 to 24 months down to 6 months or less, with remaining variability often tied to customer-side construction realities.</li>
+        <li>Standardized execution and handoffs across the project lifecycle to reduce rework and improve delivery quality.</li>
+        <li>Used Salesforce for milestone visibility and Smartsheet for detailed execution from pre-install through go-live.</li>
+        <li>Helped control readiness and quality through governed checklists archived at project close-out.</li>
+        <li>Coordinated across installation, physics, engineering, sales, operations, QA, distributors, and customer teams.</li>
       </ul>
-      <div class="note">
-        <strong>Strategic value:</strong> This case demonstrates regional leadership, delivery discipline, regulated-environment execution, and the ability to align diverse stakeholders across countries.
-      </div>
+
+      <p><strong>Results</strong></p>
+      <ul>
+        <li>Improved install efficiency and reduced avoidable parts replacement through better execution discipline.</li>
+        <li>Helped tighten forecasting variance from 12–24 months down to six months or less, with remaining movement driven mainly by construction and permitting realities.</li>
+      </ul>
     </section>
 
-    <section class="case card" id="lapaz">
-      <div class="meta">
-        <span class="tag blue">Escalation Leadership</span>
-        <span class="tag">Reliability</span>
+    <hr />
+
+    <section class="case card" id="cs3">
+      <h2>3) Radixact La Paz Reliability Turnaround</h2>
+      <p><strong>Company:</strong> Accuray</p>
+      <p><strong>Location:</strong> La Paz, Bolivia</p>
+      <p><strong>Product:</strong> Radixact</p>
+      <div>
+        <span class="tag">Escalation Leadership</span>
+        <span class="tag">Reliability Outcomes</span>
         <span class="tag">Cross-Functional Alignment</span>
         <span class="tag">Customer Trust</span>
       </div>
-      <h2>3) Radixact La Paz Reliability Turnaround — Leading Through a High-Risk Technical Challenge</h2>
-      <div class="grid-2">
-        <div>
-          <h3>Context</h3>
-          <p>
-            A Radixact deployment in La Paz, Bolivia introduced unusual environmental complexity due to high altitude. This created technical risk that could have affected long-term reliability, uptime, and customer confidence.
-          </p>
-          <h3>My role</h3>
-          <p>
-            I helped lead coordination through the escalation, balancing technical realities, project timing, and the long-term success criteria that mattered most: stable operation, dependable uptime, and confidence in clinical use.
-          </p>
-        </div>
-        <div>
-          <h3>What I did</h3>
-          <ul>
-            <li>Aligned installation, engineering, physics, quality, and operations around the site’s non-standard requirements.</li>
-            <li>Supported development and deployment of a high-altitude hardware adaptation plan.</li>
-            <li>Managed communications and execution alignment with distributor and customer stakeholders through go-live preparation.</li>
-            <li>Kept focus on long-term reliability, not just short-term project completion.</li>
-          </ul>
-        </div>
-      </div>
-      <h3>Result</h3>
-      <p>
-        The site became one of the most reliable in the region, with rare downtime and a service profile that was largely manageable through preventive maintenance.
-      </p>
-      <div class="note">
-        <strong>Strategic value:</strong> This case shows escalation leadership, calm decision-making in technically difficult conditions, and the ability to help turn a high-risk project into a stable operational result.
-      </div>
-    </section>
 
-    <section class="case card" id="unity">
-      <div class="meta">
-        <span class="tag blue">Process + System Design</span>
-        <span class="tag">Clinical Ops</span>
-        <span class="tag">Global Readiness</span>
-        <span class="tag">Operational Improvement</span>
-      </div>
-      <h2>4) Unity Connectivity Handover System — Building a Practical Workflow That Scales</h2>
-      <div class="grid-2">
-        <div>
-          <h3>Context</h3>
-          <p>
-            Clinical Operations needed site-specific system configuration details, hospital IT information, and readiness inputs to complete milestones, plan training, and support successful go-lives. The problem was not lack of information; it was that the information lived across different people, threads, and documents, creating repeated follow-up and wasted time.
-          </p>
-          <h3>My role</h3>
-          <p>
-            As an individual contributor, I designed and implemented a practical handover approach that aligned Systems Specialists inputs with Clinical Ops needs and gave teams a clearer readiness structure.
-          </p>
-        </div>
-        <div>
-          <h3>What I built</h3>
-          <ul>
-            <li>A Teams-based global dataset to centralize the clinical operations connectivity data set for each site.</li>
-            <li>Standardized fields and handover expectations so information arrived more complete and consistent.</li>
-            <li>Clearer ownership and timing to make data available ahead of milestones, training, and go-live.</li>
-            <li>A more practical workflow that reduced repeated back-and-forth and made readiness easier to assess.</li>
-          </ul>
-        </div>
-      </div>
-      <h3>Impact</h3>
+      <p><strong>Context</strong></p>
+      <p>A high-altitude deployment introduced non-standard technical requirements, increasing risk around long-term stability, uptime, and customer confidence. The challenge was not just to solve a technical problem, but to protect the overall success of the site.</p>
+
+      <p><strong>My role</strong></p>
+      <p>I helped lead coordination through a complex technical adaptation, balancing timeline pressure with the more important long-term outcome: a stable, supportable clinical system.</p>
+
+      <p><strong>What I did</strong></p>
       <ul>
-        <li>Reduced repeated outreach to Systems Specialists.</li>
-        <li>Eliminated much of the “hunt for information” across scattered channels.</li>
-        <li>Improved predictability for project milestones, onsite clinical training planning, and go-live readiness.</li>
-        <li>Adopted across 10+ sites since January 2026, with expansion continuing as more sites enter trial.</li>
+        <li>Aligned installation, physics, engineering, QA, and operations around the altitude-driven requirements gap and path forward.</li>
+        <li>Supported development and deployment of a high-altitude hardware adaptation for the site.</li>
+        <li>Managed distributor execution and customer communication through go-live preparation.</li>
       </ul>
-      <div class="note">
-        <strong>Strategic value:</strong> This case shows that I do not only execute projects; I also build lightweight systems that improve how teams work at scale.
+
+      <p><strong>Result</strong></p>
+      <ul>
+        <li>The system became one of the most reliable in the region, with rare downtime and most issues manageable through preventive maintenance rather than repeated crisis response.</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section class="case card" id="cs4">
+      <div class="meta">
+        <span class="badge">2026</span>
+        <span class="badge">Process + System Design</span>
+        <span>Global • Clinical Ops • Customer IT</span>
+      </div>
+      <h2>4) Unity Connectivity Handover System</h2>
+
+      <div class="grid2">
+        <div class="col">
+          <h3>Context</h3>
+          <p>Clinical Operations needed site-specific technical and environment data to complete milestones, prepare training, and execute go-lives. That information often lived across multiple owners, chats, documents, and escalation paths.</p>
+        </div>
+        <div class="col">
+          <h3>My role</h3>
+          <p>Designed and implemented a more structured handover approach as an individual contributor, aligning Systems Specialist inputs with Clinical Ops needs and real milestone timing.</p>
+        </div>
+        <div class="col">
+          <h3>Problem</h3>
+          <ul>
+            <li>Site connectivity data was fragmented across people and channels.</li>
+            <li>Clinical Ops had to repeatedly chase Systems Specialists for the same information.</li>
+            <li>Training readiness and milestone completion were delayed by missing or unclear inputs.</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3>Solution</h3>
+          <ul>
+            <li>Built a Teams-based global dataset to centralize site-level connectivity and environment information.</li>
+            <li>Standardized fields and a handover checklist so required inputs were complete and more consistent.</li>
+            <li>Clarified ownership and timing so information was available earlier in the project lifecycle.</li>
+          </ul>
+        </div>
+        <div class="col full">
+          <h3>Impact</h3>
+          <ul>
+            <li>Reduced repeat outreach and eliminated much of the time spent hunting for information across channels.</li>
+            <li>Improved predictability for milestone readiness, onsite clinical training planning, and go-live preparation.</li>
+            <li>Adopted across 10+ sites since January 2026, with further expansion as more sites moved through trial and readiness stages.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="contact card">
-      <h2 class="section-title" style="font-size:24px;">How these case studies support my future direction</h2>
-      <p>
-        Together, these examples tell the story I want employers and partners to see: hospital IT credibility, regional execution strength, escalation leadership, and operational improvement capability. That combination aligns well with healthcare IT leadership, clinical systems delivery, strategic customer-facing roles, and cross-regional healthcare technology organizations.
-      </p>
-      <p><strong>Email:</strong> <a href="mailto:jeanbrz@gmail.com">jeanbrz@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jp-de-paula-b305a33b0/">jp-de-paula-b305a33b0</a></p>
+    <section class="case card" style="margin-top:22px">
+      <h2>What comes next</h2>
+      <p class="small">The next best addition to this page would be an Imaging Clinic case study that broadens the story beyond radiation oncology and further reinforces your hospital and outpatient healthcare technology credibility.</p>
     </section>
 
-    <footer>
-      © jpdepaula.com • Client details anonymized for confidentiality.
-    </footer>
+    <footer>© jpdepaula.com • Client details anonymized for confidentiality.</footer>
   </div>
 </body>
 </html>
